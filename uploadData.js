@@ -6,6 +6,25 @@ function startDataUpload(){
 	var modulecode= document.getElementById("module").value;
 	//put values in postring to send to the server
 	var postString="name="+name +"&surname="+surname+"&module="+modulecode;
+	//managing the select button, checkbox and radio buttons 
+	var checkString = "";
+	for (var i = 1; i<5;i++){
+		if (document.getElementById("check"+i).checked === true){
+			checkString = checkString + document.getElementById("check"+i).value + "||"
+		}
+	}
+	postString = postString + "&modulelist="+checkString;
+	//now get the radio button values
+	if (document.getElementById("morning").checked){
+		postString=postString+"&lecturetime=morning";
+	}
+	if (document.getElementById("afternoon").checked){
+		postString=postString+"&lecturetime=afternoon";
+	}
+	//now get the select box values
+	var language = document.getElementById("languageselectbox").value;
+	postString = postString + "&language=" +language;
+	
 	alert(postString);
 	//calling the processing function
 	processData(postString);
