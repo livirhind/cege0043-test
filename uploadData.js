@@ -24,7 +24,7 @@ function startDataUpload(){
     //now get the geometry values
     var latitude =document.getElementById("latitude").value;
     var longitude = document.getElementById("longitude").value;
-    postString = postString + "&latitude" + latitude + "&longitude=" + longitude;
+    postString = postString + "&latitude=" + latitude + "&longitude=" + longitude;
 
 	//now get the select box values
 	var language = document.getElementById("languageselectbox").value;
