@@ -21,6 +21,11 @@ function startDataUpload(){
 	if (document.getElementById("afternoon").checked){
 		postString=postString+"&lecturetime=afternoon";
 	}
+    //now get the geometry values
+    var latitude =document.getElementById("latitude").value;
+    var longitude = document.getElementById("longitude").value;
+    postString = postString + "&latitude" + latitude + "&longitude=" + longitude;
+
 	//now get the select box values
 	var language = document.getElementById("languageselectbox").value;
 	postString = postString + "&language=" +language;
