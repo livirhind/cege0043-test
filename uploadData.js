@@ -7,6 +7,8 @@ function startDataUpload(){
 	//put values in postring to send to the server
 	var postString="name="+name +"&surname="+surname+"&module="+modulecode;
 	alert(postString);
+	//calling the processing function
+	processData(postString);
 }
 
 var client; //the global variable that holds the request
