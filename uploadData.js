@@ -1,5 +1,5 @@
 function startDataUpload(){
-	alert("start data upload");
+	
 	//receive the text box values
 	var name= document.getElementById("name").value;
 	var surname= document.getElementById("surname").value;
